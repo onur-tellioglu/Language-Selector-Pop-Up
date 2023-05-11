@@ -52,11 +52,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /*
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  text-decoration: none; 
-  */
 }
 
 .lang-close:hover {
@@ -159,11 +154,6 @@
   padding-left: 6px;
   font-weight: bold;
   color: black;
-  /* color: #9a7a6a; */
-}
-
-.lang-text:hover {
-  /* color: white; */
 }
 
 .lang-close-container {
