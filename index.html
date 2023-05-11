@@ -17,11 +17,11 @@
     />
   </head>
   <body>
-    <div class="cover"></div>
-    <div class="popup">
+    <div class="lang-cover"></div>
+    <div class="lang-popup">
       <div class="lang-selector">
-        <div class="close-container">
-          <button class="close">
+        <div class="lang-close-container">
+          <button class="lang-close">
             <!-- <p class="lang-text">Language Selector</p> -->
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -46,16 +46,16 @@
         </div>
       </div>
     </div>
-    <button class="open">click me</button>
+    <button class="lang-open">click me</button>
     <script>
-      $(".open").click(function () {
-        $(".popup").fadeIn(500);
-        $(".cover").fadeTo(500, 0.5);
+      $(".lang-open").click(function () {
+        $(".lang-popup").fadeIn(500);
+        $(".lang-cover").fadeTo(500, 0.5);
       });
 
-      $(".close").click(function () {
-        $(".popup").fadeOut(500);
-        $(".cover").fadeOut(500);
+      $(".lang-close").click(function () {
+        $(".lang-popup").fadeOut(500);
+        $(".lang-cover").fadeOut(500);
       });
     </script>
   </body>
