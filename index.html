@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-Up Demo</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cover"></div>
+    <div class="popup">
+      <div class="lang-selector">
+        <div class="close-container"><button class="close">X</button></div>
+        <div id="lang-item-1" class="lang-item">
+          <img class="lang-img" src="/assets/images/en.jpeg" />
+          <a class="lang-text" href="https://feritdemirkanglobal.com/"
+            >English</a
+          >
+        </div>
+        <div id="lang-item-2" class="lang-item">
+          <img class="lang-img" src="/assets/images/de.jpeg" />
+          <a class="lang-text" href="https://feritdemirkanglobal.com/de/"
+            >Deutsch</a
+          >
+        </div>
+        <div id="lang-item-3" class="lang-item">
+          <img class="lang-img" src="/assets/images/ar.jpeg" />
+          <a class="lang-text" href="https://feritdemirkanglobal.com/ar/"
+            >عربي</a
+          >
+        </div>
+      </div>
+    </div>
+    <button class="open">click me</button>
+    <script>
+      $(".open").click(function () {
+        $(".popup").fadeIn(500);
+        $(".cover").fadeTo(500, 0.5);
+      });
+
+      $(".close").click(function () {
+        $(".popup").fadeOut(500);
+        $(".cover").fadeOut(500);
+      });
+    </script>
+  </body>
+</html>
