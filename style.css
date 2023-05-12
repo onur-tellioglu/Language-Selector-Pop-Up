@@ -1,12 +1,23 @@
 @font-face {
-  /*If you want to use custom fonts, just link them by URL*/
   font-family: Horizon;
   src: url(/assets/fonts/Horizon\ Type\ -\ AcherusFeral-Bold.ttf);
   src: url(/assets/fonts/Horizon\ Type\ -\ AcherusFeral-Light.ttf);
 }
 
+.lang-selector {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  transition: 0.2s all;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: scale(1);
+  overflow: hidden;
+}
+
 .lang-popup {
-  /*This is the language selector popup*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,8 +35,34 @@
   z-index: 100;
 }
 
+.lang-popup:hover {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.lang-popup:hover .lang-selector {
+  filter: blur(0px);
+  opacity: 1;
+  transform: scale(0.88);
+}
+
+.lang-popup:hover .lang-item {
+  transform: scale(0.88);
+  opacity: 0.5;
+  filter: blur(3px);
+  box-shadow: none;
+  transition: 0.45s ease 0s;
+}
+
+.lang-selector:hover .lang-item:hover {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+  background-color: #9a7a6a;
+}
+
 .lang-cover {
-  /*This is the cover that appears when the language selector is open*/
   background-color: black;
   width: 100%;
   height: 100%;
@@ -36,7 +73,6 @@
 }
 
 .lang-open {
-  /*This is the button that opens the language selector, you can edit it hovever you want.*/
   position: fixed;
   cursor: pointer;
   top: 85%;
@@ -46,7 +82,6 @@
 }
 
 .lang-close {
-  /*This is the button that closes the Language Selector, you can edit it hovever you want.*/
   padding: 10px;
   cursor: pointer;
   font-size: 22px;
@@ -63,7 +98,6 @@
 }
 
 .lang-close:hover {
-  /*This is the button that closes the language selector, you can edit it hovever you want.*/
   transform: scale(1);
   filter: blur(0px);
   opacity: 1;
@@ -71,22 +105,7 @@
   transform: scale(1.23);
 }
 
-.lang-selector {
-  /*This is language selector's main container's style.*/
-  position: fixed;
-  width: 300px;
-  height: auto;
-  transition: 0.2s all;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transform: scale(1);
-  overflow: hidden;
-}
-
 .lang-item {
-  /*This is Language Item's style.*/
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -97,39 +116,12 @@
   transition: background-color 0.45s ease 0s;
 }
 
-.lang-selector:hover {
-  /*This is language selector's main container's style when the mouse is over the language selector.*/
-  transform: scale(0.91);
-  filter: blur(0px);
-  opacity: 1;
-}
-
-.lang-selector:hover .lang-item {
-  /*This is Language Item's style when the mouse is over the language selector.*/
-  opacity: 0.5;
-  transform: scale(0.88);
-  filter: blur(3px);
-  box-shadow: none;
-  transition: 0.45s ease 0s;
-}
-
-.lang-selector:hover .lang-item:hover {
-  /*This is Language Item's style when the mouse is over the language selector.*/
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0px);
-  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
-  background-color: #9a7a6a;
-}
-
 #lang-item-1 {
-  /*This is lang-item-1's style when the mouse is over the language selector.*/
   border-top: solid 1px rgba(0, 0, 0, 0.3);
   border-bottom: solid 1px rgba(0, 0, 0, 0.3);
 }
 
 #lang-item-1:hover {
-  /*This is lang-item-1's style when the mouse is over the lang-item-1.*/
   transform: scale(1);
   filter: blur(0px);
   opacity: 1;
@@ -139,12 +131,10 @@
 }
 
 #lang-item-2 {
-  /*This is lang-item-2's style when the mouse is over the language selector.*/
   border-bottom: solid 1px rgba(0, 0, 0, 0.3);
 }
 
 #lang-item-2:hover {
-  /*This is lang-item-2's style when the mouse is over the lang-item-2.*/
   transform: scale(1);
   filter: blur(0px);
   opacity: 1;
@@ -154,12 +144,10 @@
 }
 
 #lang-item-3 {
-  /*This is lang-item-3's style when the mouse is over the language selector.*/
   border-bottom: none;
 }
 
 #lang-item-3:hover {
-  /*This is lang-item-3's style when the mouse is over the lang-item-3.*/
   transform: scale(1);
   filter: blur(0px);
   opacity: 1;
@@ -167,13 +155,10 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
-  /* border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px; */
   border-top: solid 1px rgba(0, 0, 0, 0.3);
 }
 
 .lang-img {
-  /*This is the style of the image that appears next to the language name.*/
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -181,7 +166,6 @@
 }
 
 .lang-text {
-  /*This is the style of the language name.*/
   font-size: 20px;
   margin-left: 20px;
   font-family: "Horizon";
@@ -194,7 +178,6 @@
 }
 
 .lang-close-container {
-  /*This is the style of the container that contains the close button.*/
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
