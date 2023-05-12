@@ -92,7 +92,6 @@
 
 .lang-close:hover {
   transform: scale(1);
-  filter: blur(0px);
   opacity: 1;
   color: darkred;
   transform: scale(1.23);
