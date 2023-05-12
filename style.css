@@ -35,11 +35,6 @@
   z-index: 100;
 }
 
-.lang-popup:hover {
-  filter: blur(0px);
-  opacity: 1;
-}
-
 .lang-popup:hover .lang-selector {
   filter: blur(0px);
   opacity: 1;
@@ -54,7 +49,7 @@
   transition: 0.45s ease 0s;
 }
 
-.lang-selector:hover .lang-item:hover {
+.lang-item:hover {
   opacity: 1;
   transform: scale(1);
   filter: blur(0px);
