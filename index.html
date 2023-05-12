@@ -83,6 +83,24 @@
         $(".lang-cover").fadeOut(500); // Cover Fade Out
       });
     </script>
+    <script>
+      $(document).ready(function () {
+        $(".lang-item").hover(
+          function () {
+            $(".lang-item").not(this).css({
+              filter: "blur(3px)",
+              opacity: "0.5",
+            });
+          },
+          function () {
+            $(".lang-item").css({
+              filter: "",
+              opacity: "",
+            });
+          }
+        );
+      });
+    </script>
     <!-- Pop-Up Script End -->
   </body>
 </html>
