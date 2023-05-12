@@ -5,38 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pop-Up Demo</title>
+    <!-- JQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Pop-Up Area Start -->
+    <!-- Empty div for Pop-Up's background -->
     <div class="lang-cover"></div>
+    <!-- Pop-Up Container Start -->
     <div class="lang-popup">
+      <!-- Language Selector Start -->
       <div class="lang-selector">
         <div class="lang-close-container">
+          <!-- Any clickable object can be the Pop-Up Close button. Element's CSS Class must be "lang-close" -->
           <button class="lang-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
+        <!-- Language Item 1 | English -->
         <div id="lang-item-1" class="lang-item">
           <img class="lang-img" src="/assets/images/en.jpeg" />
           <a class="lang-text" href="https://feritdemirkanglobal.com/"
             >English</a
           >
         </div>
+        <!-- Language Item 2 | Deutsch-->
         <div id="lang-item-2" class="lang-item">
           <img class="lang-img" src="/assets/images/de.jpeg" />
           <a class="lang-text" href="https://feritdemirkanglobal.com/de/"
             >Deutsch</a
           >
         </div>
+        <!-- Language Item 3 | عربي-->
         <div id="lang-item-3" class="lang-item">
           <img class="lang-img" src="/assets/images/ar.jpeg" />
           <a class="lang-text" href="https://feritdemirkanglobal.com/ar/"
@@ -44,18 +55,30 @@
           >
         </div>
       </div>
+      <!-- Language Selector End -->
     </div>
+    <!-- Pop-Up Container End -->
+    <!-- Pop-Up Area End -->
+
+    <!-- Pop-Up Trigger Start -->
+    <!-- Any clickable object can be the Pop-Up Trigger. Element's CSS Class must be "lang-open" -->
     <button class="lang-open">Language Selector</button>
+    <!-- Pop-Up Trigger End -->
+
+    <!-- Pop-Up Script Start -->
     <script>
       $(".lang-open").click(function () {
-        $(".lang-popup").fadeIn(500);
-        $(".lang-cover").fadeTo(500, 0.5);
+        // Click Event For Open Button
+        $(".lang-popup").fadeIn(500); // Pop-Up Fade In
+        $(".lang-cover").fadeTo(500, 0.5); // Cover Fade In
       });
 
       $(".lang-close").click(function () {
-        $(".lang-popup").fadeOut(500);
-        $(".lang-cover").fadeOut(500);
+        // Click Event For Close Button
+        $(".lang-popup").fadeOut(500); // Pop-Up Fade Out
+        $(".lang-cover").fadeOut(500); // Cover Fade Out
       });
     </script>
+    <!-- Pop-Up Script End -->
   </body>
 </html>
