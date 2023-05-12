@@ -39,14 +39,14 @@
   /*This is the button that opens the language selector, you can edit it hovever you want.*/
   position: fixed;
   cursor: pointer;
-  top: 50%;
+  top: 85%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .lang-close {
-  /*This is the button that closes the language selector, you can edit it hovever you want.*/
+  /*This is the button that closes the Language Selector, you can edit it hovever you want.*/
   padding: 10px;
   cursor: pointer;
   font-size: 22px;
@@ -58,6 +58,8 @@
   align-items: center;
   transition: color 0.6s ease 0s;
   color: rgb(222, 9, 9);
+  transform: scale(1);
+  transition: all 0.6s ease 0s;
 }
 
 .lang-close:hover {
@@ -66,6 +68,7 @@
   filter: blur(0px);
   opacity: 1;
   color: darkred;
+  transform: scale(1.23);
 }
 
 .lang-selector {
@@ -75,6 +78,11 @@
   height: auto;
   transition: 0.2s all;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: scale(1);
+  overflow: hidden;
 }
 
 .lang-item {
@@ -89,20 +97,27 @@
   transition: background-color 0.45s ease 0s;
 }
 
+.lang-selector:hover {
+  /*This is language selector's main container's style when the mouse is over the language selector.*/
+  transform: scale(0.91);
+  filter: blur(0px);
+  opacity: 1;
+}
+
 .lang-selector:hover .lang-item {
   /*This is Language Item's style when the mouse is over the language selector.*/
-  filter: blur(3px);
   opacity: 0.5;
-  transform: scale(0.98);
+  transform: scale(0.88);
+  filter: blur(3px);
   box-shadow: none;
   transition: 0.45s ease 0s;
 }
 
 .lang-selector:hover .lang-item:hover {
   /*This is Language Item's style when the mouse is over the language selector.*/
+  opacity: 1;
   transform: scale(1);
   filter: blur(0px);
-  opacity: 1;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
   background-color: #9a7a6a;
 }
@@ -152,8 +167,8 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
+  /* border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px; */
   border-top: solid 1px rgba(0, 0, 0, 0.3);
 }
 
