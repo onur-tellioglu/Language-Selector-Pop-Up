@@ -5,91 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Language Selector Pop-Up</title>
-    <!-- JQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
-    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Pop-Up Area Start -->
-    <!-- Empty div for Pop-Up's background -->
     <div class="lang-cover"></div>
-    <!-- Pop-Up Container Start -->
     <div class="lang-popup">
-      <!-- Language Selector Start -->
       <div class="lang-selector">
         <div class="lang-close-container">
-          <!-- Any clickable object can be the Pop-Up Close button. Element's CSS Class must be "lang-close" -->
           <button class="lang-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
         <div id="langs">
-          <!-- Language Item 1 | English -->
-          <div id="lang-item-1" class="lang-item">
+          <a
+            id="lang-item-1"
+            class="lang-item"
+            href="https://feritdemirkanglobal.com/"
+          >
             <img
               class="lang-img"
               src="https://www.feritdemirkanglobal.com/wp-content/uploads/2023/05/united-kingdom.png"
             />
-            <a class="lang-text" href="https://feritdemirkanglobal.com/"
-              >English</a
-            >
-          </div>
-          <!-- Language Item 2 | Deutsch-->
-          <div id="lang-item-2" class="lang-item">
+            <span class="lang-text">English</span>
+          </a>
+          <a
+            id="lang-item-2"
+            class="lang-item"
+            href="https://feritdemirkanglobal.com/de/"
+          >
             <img
               class="lang-img"
               src="https://www.feritdemirkanglobal.com/wp-content/uploads/2023/05/germany.png"
             />
-            <a class="lang-text" href="https://feritdemirkanglobal.com/de/"
-              >Deutsch</a
-            >
-          </div>
-          <!-- Language Item 3 | عربي-->
-          <div id="lang-item-3" class="lang-item">
+            <span class="lang-text">Deutsch</span>
+          </a>
+          <a
+            id="lang-item-3"
+            class="lang-item"
+            href="https://feritdemirkanglobal.com/ar/"
+          >
             <img
               class="lang-img"
               src="https://www.feritdemirkanglobal.com/wp-content/uploads/2023/05/saudi-arabia.png"
             />
-            <a class="lang-text" href="https://feritdemirkanglobal.com/ar/"
-              >عربي</a
-            >
-          </div>
+            <span class="lang-text">عربي</span>
+          </a>
         </div>
       </div>
-      <!-- Language Selector End -->
     </div>
-    <!-- Pop-Up Container End -->
-    <!-- Pop-Up Area End -->
-
-    <!-- Pop-Up Opener Start -->
-    <!-- Any clickable object can be the Pop-Up Opener. Element's CSS Class must be "lang-open" -->
     <button class="lang-open">Language Selector</button>
-    <!-- Pop-Up Opener End -->
-
-    <!-- Pop-Up Script Start -->
     <script>
-      //Script must be located right before the end of the Body tag.
-
       $(".lang-open").click(function () {
-        // Click Event For Open Button
-        $(".lang-popup").fadeIn(500); // Pop-Up Fade In
-        $(".lang-cover").fadeTo(500, 0.5); // Cover Fade In
+        $(".lang-popup").fadeIn(500);
+        $(".lang-cover").fadeTo(500, 0.5);
       });
 
       $(".lang-close").click(function () {
-        // Click Event For Close Button
-        $(".lang-popup").fadeOut(500); // Pop-Up Fade Out
-        $(".lang-cover").fadeOut(500); // Cover Fade Out
+        $(".lang-popup").fadeOut(500);
+        $(".lang-cover").fadeOut(500);
+      });
+
+      $(".lang-close-transparent").click(function () {
+        $(".lang-popup").fadeOut(500);
+        $(".lang-cover").fadeOut(500);
       });
     </script>
     <script>
@@ -110,6 +97,5 @@
         );
       });
     </script>
-    <!-- Pop-Up Script End -->
   </body>
 </html>

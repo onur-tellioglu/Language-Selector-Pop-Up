@@ -80,6 +80,10 @@
   border: none;
 }
 
+.lang-close-transparent {
+  cursor: pointer;
+}
+
 .lang-close:hover {
   opacity: 1;
   color: darkred;
@@ -163,4 +167,10 @@
   flex-direction: row;
   justify-content: flex-end;
   padding-right: 13px;
+}
+.lang-item:hover .lang-text {
+  color: #fff;
+}
+a {
+  text-decoration: none;
 }
